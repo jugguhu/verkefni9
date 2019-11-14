@@ -52,7 +52,6 @@ const program = (() => {
     results.appendChild(div);
   }
 
-
   function showCompanies(results) {
     clear('.results');
     if (results.length === 0) {
