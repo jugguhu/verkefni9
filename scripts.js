@@ -61,7 +61,7 @@ const program = (() => {
   function showCompanies(results) {
     clear('.results');
     if (results.length === 0) {
-      console.log('no results');
+      showErrorMessage('Ekkert fyrirtæki fannst fyrir leitarstreng');
     }
     else {
       let i;
@@ -86,7 +86,7 @@ const program = (() => {
     let companySn = el('dd', arrayItem.sn);
     dl.appendChild(companySn);
 
-    if (arrayItem.active == 1) {
+    if (arrayItem.active === 1) {
       div.classList.add('company--active');
       let addressDt = el('dt', 'Heimilisfang');
       dl.appendChild(addressDt);
